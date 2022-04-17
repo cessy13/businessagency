@@ -1,14 +1,20 @@
 // Navbar
 const menu = document.querySelector(".menu");
 const navbar = document.querySelector(".navbar");
-const menuLink = document.querySelector(".nav-link");
+const a = document.querySelectorAll(".nav-link");
 
 menu.addEventListener("click", () => {
   navbar.classList.toggle("change");
   menu.classList.toggle("change");
 });
 
-menuLink.addEventListener("click", () => {});
+// Closing the Menu when one of the links are clicked
+a.forEach((e) =>
+  e.addEventListener("click", () => {
+    navbar.classList.toggle("change");
+    menu.classList.toggle("change");
+  })
+);
 
 // Section 2 Video
 const video = document.querySelector(".video");
